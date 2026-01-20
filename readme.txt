@@ -1,0 +1,3 @@
+CrewAi Agents :
+ > Investigator
+ > Writer
