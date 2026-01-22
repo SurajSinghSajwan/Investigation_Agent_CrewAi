@@ -1,8 +1,13 @@
+import os
 import streamlit as st
 from crewai import LLM
 from crew.crew_builder import build_crew
 from memory.session_store import SessionStore
-from config import ASIMOV_API_KEY, ASIMOV_BASE_URL, ASIMOV_MODEL
+from config import ASIMOV_BASE_URL, ASIMOV_MODEL
+
+if "ASIMOV_API_KEY" in st.secrets:
+    os.environ["ASIMOV_API_KEY"] = st.secrets["ASIMOV_API_KEY"]
+
 
 
 st.set_page_config(page_title="Investigation Assistant", layout="wide")
