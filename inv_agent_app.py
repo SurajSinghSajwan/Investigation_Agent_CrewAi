@@ -7,8 +7,8 @@ from config import ASIMOV_BASE_URL, ASIMOV_MODEL
 
 if "ASIMOV_API_KEY" in st.secrets:
     os.environ["ASIMOV_API_KEY"] = st.secrets["ASIMOV_API_KEY"]
-
-
+    
+ASIMOV_API_KEY = os.getenv("ASIMOV_API_KEY")
 
 st.set_page_config(page_title="Investigation Assistant", layout="wide")
 st.title("Investigation Assistant")
